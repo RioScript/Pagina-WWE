@@ -1,0 +1,85 @@
+/*En este archivo se definiran los estilos de el indice y hero*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(21, 20, 20);
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.hero-title {
+  font-family: "Anton", sans-serif;
+  font-size: 4rem;
+  letter-spacing: 2px;
+}
+
+.hero-text {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.05rem;
+  color: #e0e0e0;
+  max-width: 600px;
+}
+
+.hero-btn {
+  margin-top: 0.5rem;
+  padding: 1rem 3rem;
+  font-family: "Anton", sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #d71920, #9e1015);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(215, 25, 32, 0.4);
+}
+
+.hero-text::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #d71920;
+  margin: 1rem auto 0;
+}
+
+/*Animaciones de carga para la seccion de Hero*/
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* Delays */
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.6s; }
+.delay-3 { animation-delay: 1s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
