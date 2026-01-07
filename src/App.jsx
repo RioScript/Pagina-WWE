@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Index from "./components/Index";
-import Superstars from "./components/Superstars";
+import Superstars from "./components/superstars/Superstars";
 
 export default function App() {
   return (
