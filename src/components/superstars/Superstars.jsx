@@ -13,7 +13,9 @@ export default function Superstars() {
       <div className="superstars-grid">
         {superstars.map((s) => (
           <div key={s.id} className={`superstar-card ${s.color}`}>
-            <img src={s.img} className="superstar-img" />
+            <div className="superstar-img-wrapper">
+              <img src={s.img} className="superstar-img" />
+            </div>
             <div className="superstar-name">{s.name}</div>
           </div>
         ))}

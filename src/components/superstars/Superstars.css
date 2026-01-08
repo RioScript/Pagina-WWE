@@ -16,7 +16,7 @@
   gap: 0.75rem;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
 }
 
 .brand-color {
@@ -38,50 +38,76 @@
 
 .superstars-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
 .superstar-card {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    height: 380px;
-    background: linear-gradient(180deg, #111, #000);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    display: flex;
-    align-items: flex-end;
-    transition: 0.3s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px;
+  background: linear-gradient(180deg, #111, #000);
+  border: 3px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.3s;
 }
 
 .superstar-card:hover {
-    transform: translateY(-8px);
+  transform: translateY(-8px);
+}
+
+.superstar-img-wrapper {
+  height: calc(100% - 70px);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .superstar-img {
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .superstar-name {
-    width: 100%;
-    padding: 1rem;
-    text-align: center;
-    font-family: "Anton", sans-serif;
-    letter-spacing: 2px;
-    background: rgba(0, 0, 0, 0.85);
-    border-top: 2px solid currentColor;
+  width: 100%;
+  height: 70px;
+  padding: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: "Anton", sans-serif;
+  letter-spacing: 2px;
+  background: rgba(0, 0, 0, 0.85);
+  border-top: 2px solid currentColor;
 }
 
 .red {
-    color: #d71920;
+  color: #d71920;
 }
 
 .blue {
-    color: #1f6cff;
+  color: #1f6cff;
 }
 
 .gold {
-    color: #d4af37;
+  color: #d4af37;
+}
+
+/*Grid De Cards Responsive*/
+
+@media (max-width: 1024px) {
+  .superstars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .superstars-grid {
+    grid-template-columns: 1fr;
+  }
 }
